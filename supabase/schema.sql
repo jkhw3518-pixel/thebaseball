@@ -242,3 +242,6 @@ $$;
 
 grant execute on function public.seed_league(jsonb, jsonb) to anon, authenticated;
 grant execute on function public.record_game(uuid, text, int, text, jsonb, jsonb) to anon, authenticated;
+
+-- API 스키마 캐시 새로고침 (테이블을 바로 인식하도록)
+notify pgrst, 'reload schema';
